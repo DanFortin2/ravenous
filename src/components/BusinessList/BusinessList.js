@@ -8,7 +8,8 @@ class BusinessList extends React.Component {
       <div className="BusinessList">
         {
           this.props.businesses.map(business => {
-            return <Business business={business}/>
+            //setting props on business component to equal the unique ID for the business key from Yelp API
+            return <Business business={business} key={business.id}/>
           })
         }
       </div>
